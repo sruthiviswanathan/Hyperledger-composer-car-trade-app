@@ -1,0 +1,233 @@
+================================================================================
+==== Node Report ===============================================================
+
+Event: exception, location: "OnUncaughtException"
+Filename: node-report.20190524.052100.9446.001.txt
+Dump event time:  2019/05/24 05:21:00
+Module load time: 2019/05/24 03:37:08
+Process ID: 9446
+Command line: node /home/zilker/.nvm/versions/node/v8.16.0/bin/composer network upgrade --card PeerAdmin@hlfv1 --networkName car-trade-app -V 0.0.7 
+
+Node.js version: v8.16.0
+(http_parser: 2.8.0, v8: 6.2.414.77, uv: 1.23.2, zlib: 1.2.11, ares: 1.10.1-DEV,
+ modules: 57, nghttp2: 1.33.0, napi: 4, openssl: 1.0.2r, icu: 60.1, unicode: 10.0,
+ cldr: 32.0, tz: 2017c)
+
+node-report version: 2.2.1 (built against Node.js v8.16.0, glibc 2.23, 64 bit)
+
+OS version: Linux 4.15.0-50-generic #54~16.04.1-Ubuntu SMP Wed May 8 15:55:19 UTC 2019
+(glibc: 2.23)
+
+Machine: ubuntu x86_64
+
+================================================================================
+==== JavaScript Stack Trace ====================================================
+
+WriteStream.emit (events.js:183:7)
+onwriteError (_stream_writable.js:417:12)
+onwrite (_stream_writable.js:439:5)
+_destroy (internal/streams/destroy.js:39:7)
+WriteStream.Socket._destroy (net.js:568:3)
+WriteStream.destroy (internal/streams/destroy.js:32:8)
+WriteWrap.afterWrite [as oncomplete] (net.js:870:10)
+
+================================================================================
+==== Native Stack Trace ========================================================
+
+ 0: [pc=0x7f80406ad56b] nodereport::OnUncaughtException(v8::Isolate*) [/home/zilker/.nvm/versions/node/v8.16.0/lib/node_modules/composer-cli/node_modules/node-report/api.node]
+ 1: [pc=0xeb13e2] v8::internal::Isolate::Throw(v8::internal::Object*, v8::internal::MessageLocation*) [node]
+ 2: [pc=0x102acdd] v8::internal::Runtime_Throw(int, v8::internal::Object**, v8::internal::Isolate*) [node]
+ 3: [pc=0x1076829042fd] 
+
+================================================================================
+==== JavaScript Heap and Garbage Collector =====================================
+
+Heap space name: new_space
+    Memory size: 33,554,432 bytes, committed memory: 26,967,192 bytes
+    Capacity: 16,498,688 bytes, used: 10,747,080 bytes, available: 5,751,608 bytes
+Heap space name: old_space
+    Memory size: 21,295,104 bytes, committed memory: 21,064,048 bytes
+    Capacity: 20,555,152 bytes, used: 20,002,016 bytes, available: 553,136 bytes
+Heap space name: code_space
+    Memory size: 2,097,152 bytes, committed memory: 1,443,616 bytes
+    Capacity: 1,673,248 bytes, used: 1,370,976 bytes, available: 302,272 bytes
+Heap space name: map_space
+    Memory size: 1,593,344 bytes, committed memory: 1,440,000 bytes
+    Capacity: 1,405,416 bytes, used: 1,331,528 bytes, available: 73,888 bytes
+Heap space name: large_object_space
+    Memory size: 4,124,672 bytes, committed memory: 4,124,672 bytes
+    Capacity: 1,440,837,696 bytes, used: 4,047,424 bytes, available: 1,436,790,272 bytes
+
+Total heap memory size: 62,664,704 bytes
+Total heap committed memory: 55,039,528 bytes
+Total used heap memory: 37,499,024 bytes
+Total available heap memory: 1,443,471,176 bytes
+
+Heap memory limit: 1,501,560,832
+
+================================================================================
+==== Resource Usage ============================================================
+
+Process total resource usage:
+  User mode CPU: 1.680393 secs
+  Kernel mode CPU: 0.140032 secs
+  Average CPU Consumption : 0.0292109%
+  Maximum resident set size: 85,819,392 bytes
+  Page faults: 8 (I/O required) 24573 (no I/O required)
+  Filesystem activity: 4288 reads 16 writes
+
+Event loop thread resource usage:
+  User mode CPU: 1.531579 secs
+  Kernel mode CPU: 0.131064 secs
+  Average CPU Consumption : 0.0266791%
+  Filesystem activity: 4280 reads 16 writes
+
+================================================================================
+==== Node.js libuv Handle Summary ==============================================
+
+(Flags: R=Ref, A=Active)
+Flags  Type      Address             Details
+[-A]   async     0x000000000249b4b0  
+[--]   check     0x00007fffa1422b40  
+[R-]   idle      0x00007fffa1422bb8  
+[--]   prepare   0x00007fffa1422c30  
+[--]   check     0x00007fffa1422ca8  
+[-A]   async     0x0000000002186780  
+[-A]   async     0x00000000024c9370  
+[-A]   async     0x00000000024c8140  
+[R-]   timer     0x00000000024c8aa0  repeat: 0, timeout expired: 16230191 ms ago
+[R-]   tty       0x00000000024acf88  , file descriptor: 22, write queue size: 0, readable, writable
+[-A]   signal    0x00000000024ad120  signum: 28 (SIGWINCH)
+[R-]   tty       0x00000000024b2818  , write queue size: 0
+[-A]   async     0x00000000024c9140  
+[-A]   async     0x00000000024b2250  
+[-A]   async     0x00000000024c6340  
+[-A]   async     0x00000000024c5b60  
+[-A]   async     0x00000000024c71b0  
+[-A]   async     0x00000000024c8c40  
+[-A]   async     0x00000000024c7120  
+[-A]   async     0x00000000024c8580  
+[-A]   async     0x0000000002545630  
+[-A]   async     0x00007f80408b5cc0  
+[-A]   async     0x000000000251dc70  
+[-A]   async     0x000000000250d860  
+[-A]   signal    0x000000000251c750  signum: 6 (SIGABRT)
+[-A]   signal    0x00000000024415a0  signum: 14 (SIGALRM)
+[-A]   signal    0x000000000251d5f0  signum: 1 (SIGHUP)
+[-A]   signal    0x00000000024fbd70  signum: 2 (SIGINT)
+[-A]   signal    0x00000000024fff70  signum: 15 (SIGTERM)
+[-A]   signal    0x00000000024fba10  signum: 26 (SIGVTALRM)
+[-A]   signal    0x00000000025b1a70  signum: 24 (SIGXCPU)
+[-A]   signal    0x00000000024aa240  signum: 25 (SIGXFSZ)
+[-A]   signal    0x00000000024f4090  signum: 12 (SIGUSR2)
+[-A]   signal    0x000000000251e9c0  signum: 5 (SIGTRAP)
+[-A]   signal    0x00000000024fbbb0  signum: 31 (SIGSYS)
+[-A]   signal    0x0000000002510830  signum: 3 (SIGQUIT)
+[-A]   signal    0x0000000002510dc0  signum: 6 (SIGABRT)
+[-A]   signal    0x0000000002510eb0  signum: 29 (SIGIO)
+[-A]   signal    0x0000000002589ba0  signum: 29 (SIGIO)
+[-A]   signal    0x0000000002589c90  signum: 30 (SIGPWR)
+[-A]   signal    0x00000000024f71a0  signum: 16 (SIGSTKFLT)
+[-A]   signal    0x00000000024f7290  signum: 31 (SIGSYS)
+[RA]   timer     0x0000000002589e20  repeat: 0, timeout in: 80 ms
+[-A]   async     0x000000000251d4e0  
+
+================================================================================
+==== System Information ========================================================
+
+Environment variables
+  XDG_VTNR=7
+  XDG_SESSION_ID=c2
+  TERM_PROGRAM=vscode
+  XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/zilker
+  CLUTTER_IM_MODULE=xim
+  GIO_LAUNCHED_DESKTOP_FILE_PID=2701
+  SESSION=ubuntu
+  NVM_CD_FLAGS=
+  GPG_AGENT_INFO=/home/zilker/.gnupg/S.gpg-agent:0:1
+  TERM=xterm-256color
+  XDG_MENU_PREFIX=gnome-
+  SHELL=/bin/bash
+  QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
+  TERM_PROGRAM_VERSION=1.34.0
+  UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1968
+  GTK_MODULES=gail:atk-bridge:unity-gtk-module
+  NVM_DIR=/home/zilker/.nvm
+  USER=zilker
+  LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+  QT_ACCESSIBILITY=1
+  UNITY_HAS_3D_SUPPORT=true
+  XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+  XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+  SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+  SESSION_MANAGER=local/ubuntu:@/tmp/.ICE-unix/2221,unix/ubuntu:/tmp/.ICE-unix/2221
+  DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path
+  GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/code.desktop
+  UNITY_DEFAULT_PROFILE=unity
+  XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+  DESKTOP_SESSION=ubuntu
+  PATH=/home/zilker/.nvm/versions/node/v8.16.0/bin:/home/zilker/bin:/home/zilker/.local/bin:/home/zilker/bin:/home/zilker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  QT_QPA_PLATFORMTHEME=appmenu-qt5
+  QT_IM_MODULE=ibus
+  JOB=unity-settings-daemon
+  XDG_SESSION_TYPE=x11
+  PWD=/home/zilker/fabric-dev-servers/car-trade-app
+  XMODIFIERS=@im=ibus
+  LANG=en_US.UTF-8
+  GDM_LANG=en_US
+  MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path
+  CHROME_DESKTOP=code-url-handler.desktop
+  COMPIZ_CONFIG_PROFILE=ubuntu
+  IM_CONFIG_PHASE=1
+  GDMSESSION=ubuntu
+  GTK2_MODULES=overlay-scrollbar
+  SESSIONTYPE=gnome-session
+  HOME=/home/zilker
+  XDG_SEAT=seat0
+  SHLVL=2
+  LANGUAGE=en_US
+  GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+  UPSTART_EVENTS=xsession started
+  LOGNAME=zilker
+  XDG_SESSION_DESKTOP=ubuntu
+  COMPIZ_BIN_PATH=/usr/bin/
+  DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-vq7Q7ei3Ka
+  XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+  QT4_IM_MODULE=xim
+  NVM_BIN=/home/zilker/.nvm/versions/node/v8.16.0/bin
+  LESSOPEN=| /usr/bin/lesspipe %s
+  UPSTART_JOB=unity7
+  DISPLAY=:0
+  XDG_RUNTIME_DIR=/run/user/1000
+  XDG_CURRENT_DESKTOP=Unity
+  GTK_IM_MODULE=ibus
+  NO_AT_BRIDGE=1
+  LESSCLOSE=/usr/bin/lesspipe %s %s
+  XAUTHORITY=/home/zilker/.Xauthority
+  _=/home/zilker/.nvm/versions/node/v8.16.0/bin/composer
+  SUPPRESS_NO_CONFIG_WARNING=y
+
+Resource limits                        soft limit      hard limit
+  core file size (blocks)                       0       unlimited
+  data seg size (kbytes)                unlimited       unlimited
+  file size (blocks)                    unlimited       unlimited
+  max locked memory (bytes)                 65536           65536
+  max memory size (kbytes)              unlimited       unlimited
+  open files                              1048576         1048576
+  stack size (bytes)                      8388608       unlimited
+  cpu time (seconds)                    unlimited       unlimited
+  max user processes                        23761           23761
+  virtual memory (kbytes)               unlimited       unlimited
+
+Loaded libraries
+  /lib/x86_64-linux-gnu/libdl.so.2
+  /lib/x86_64-linux-gnu/librt.so.1
+  /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+  /lib/x86_64-linux-gnu/libm.so.6
+  /lib/x86_64-linux-gnu/libgcc_s.so.1
+  /lib/x86_64-linux-gnu/libpthread.so.0
+  /lib/x86_64-linux-gnu/libc.so.6
+  /lib64/ld-linux-x86-64.so.2
+  /home/zilker/.nvm/versions/node/v8.16.0/lib/node_modules/composer-cli/node_modules/node-report/api.node
+
+================================================================================

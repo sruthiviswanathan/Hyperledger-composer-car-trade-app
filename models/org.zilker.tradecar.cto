@@ -1,0 +1,104 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * Write your model definitions here
+ */
+
+namespace org.zilker.tradecar
+
+asset Car identified by carId {
+	o String carId
+    o String carName
+    o Features features
+    o DateTime registrationDate
+    o Double price
+    o PriceUnit priceUnit
+    --> person owner
+    
+}
+
+enum Type{
+	o PETROL
+    o DIESEL
+}
+
+enum PriceUnit {
+	o LAKHS
+  	o THOUSAND
+    o CRORE
+}
+
+enum MileageUnit{
+  o KM_PER_L
+  o M_PER_L
+}
+
+enum SpeedUnit {
+  o KM_PER_HR
+  o M_PER_HR
+}
+  
+concept Features {
+  	o Type type
+	o String color
+    o String manufacturer
+    o Double manufactureYear
+    o Double speed
+    o SpeedUnit speedUnit
+    o Double mileage
+    o MileageUnit mileageUnit
+}
+
+concept Address {
+	o String street
+    o String city
+    o String country
+    o String zipcode
+}
+concept Contact {
+	o String phone
+    o String email
+}
+
+abstract participant person identified by id {
+  	o String id
+    o String name
+	o Address address
+    o Contact contact
+}
+
+participant Customer extends person {
+
+}
+
+participant Manufacturer extends person{
+
+}
+
+transaction newCar {
+    o String carName
+    o Features features
+    o DateTime registrationDate
+    o Double price
+    o PriceUnit priceUnit
+      --> person owner
+}
+
+transaction TradeCar {
+	o String id
+  --> person newOwner        
+}
+
+
