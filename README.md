@@ -18,7 +18,10 @@ TO RUN:
 composer-rest-server -c admin@car-trade-app -n required -u true -d n -w true
 
 AFTER UPDATING :
-update version in package.jsoncomposer archive create -a car-trade-app.bna -t dir -n .
+update version in package.json
+
+composer archive create -a car-trade-app.bna -t dir -n .
+
 npm install  (or) 
      -- this will update bna file
 composer network install
