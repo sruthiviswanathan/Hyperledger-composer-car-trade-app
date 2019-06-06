@@ -3,10 +3,15 @@
 an app that trades car
 
 npm install
+
 composer network install
+
 docker ps
+
 composer card list
+
 composer network install
+
 composer network start
 
 TO RUN:
